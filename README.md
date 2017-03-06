@@ -18,7 +18,8 @@ Debugging or other purposes; manually constucting a String with bytes of a parti
 you can get a javaByte of knowing a particular character's decimal representation in some encoding. 
 
 ```java
-byte[] bytes=new byte[] {-48, -97, -47, -128, -48, -72, -48, -78, -48, -75, -47, -126};
+byte javaByte1 = getByteDecimal(208);  //gives -48
+byte javaByte2 = getByteDecimal(159);  //gives -97
 ``` 
 *In plans*: 
 
