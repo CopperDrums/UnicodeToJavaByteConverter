@@ -16,7 +16,7 @@ input: U+041F, UTF-8 (Cyrillic letter 'П') => 208 159 in UTF-8 => -48 -97 is de
 you can manually construct a String using getByteDecimal(tableDecimal) function:
 
 ```java
-byte[] bytes=new byte[] {-48, -97, -47, -128, -48, -72, -48, -78, -48, -75, -47, -126}, "UTF-8");
+byte[] bytes=new byte[] {-48, -97, -47, -128, -48, -72, -48, -78, -48, -75, -47, -126};
 String w = new String(bytes, "UTF-8");  => "Привет"
 ``` 
 *In plans*: 
