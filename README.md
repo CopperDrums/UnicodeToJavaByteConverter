@@ -26,6 +26,6 @@ gettting javaByte using Unicode's code points.
 ```java
 String encoding="UTF-8";
 
-byte[] javaBytes=makeBytes("U+041F", "U+0440", "U+0438", "U+0432", "U+0435", "U+0442");
+byte[] javaBytes=makeByte("U+041F", encoding);
 
 ```
