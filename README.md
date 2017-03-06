@@ -11,6 +11,8 @@ input: U+041F, UTF-8 (Cyrillic letter 'П') => 208 159 in UTF-8 => -48 -97 is de
 
 **Practical applications**:
 
+Debugging or other purposes; manually constucting a String with bytes of a particular encoding.
+
 *As of now*: 
 
 you can get a javaByte of knowing a particular character's decimal representation in some encoding. 
