@@ -55,16 +55,36 @@ public class ByteGetter  {
                     return (int) result;
         }
         
-        private static int log2(int number)  {
-                return (int) (Math.log(number)/Math.log(2));
+         private static void pasteArray(int[] array0, int[] array1)  {
+                for (int i=0; i<Math.min(array1.length, array0.length); i++)  {
+                    array1[i]=array0[i];
+                } 
         }
         
-        private static String constructString(int[] numbers)  {
-                StringBuilder sb=new StringBuilder();
-                for (int i=numbers.length-1; i>=0; i--)  {
-                        sb.append(numbers[i]);
+      
+        //THESE FUNCTIONS ARE NOT USED - AS OF NOW
+
+        private static int[] getTwosComplement(int[] tableBinary)  {
+            
+                for (int i=0; i<tableBinary.length; i++)  {
+                        if (tableBinary[i]==1)  {
+                            tableBinary[i]=0;
+                        }
+                        else  {
+                            tableBinary[i]=1;
+                        }
                 }
-                return sb.toString();
+                
+                return plusOne(tableBinary);
+        }
+        
+        private static int getDecimal(int[] binary)  {
+            
+                int result=0;
+                for (int i=0; i<binary.length; i++)  {
+                    result+=Math.pow(2, i);
+                }
+                return result;
         }
         
         private static int[] plusOne(int[] binary)  {
@@ -89,11 +109,7 @@ public class ByteGetter  {
                 return result;
             }
         
-        private static void pasteArray(int[] array0, int[] array1)  {
-                for (int i=0; i<Math.min(array1.length, array0.length); i++)  {
-                    array1[i]=array0[i];
-                } 
-        }
+      
     
         private static int[] minusOne(int[] binary)  {
                 int k=0;
@@ -108,28 +124,17 @@ public class ByteGetter  {
                 }
                 
                 return binary;
-        }
+        }        
 
-
-        private static int[] getTwosComplement(int[] tableBinary)  {
-            
-                for (int i=0; i<tableBinary.length; i++)  {
-                        if (tableBinary[i]==1)  {
-                            tableBinary[i]=0;
-                        }
-                        else  {
-                            tableBinary[i]=1;
-                        }
-                }
-                
-                return plusOne(tableBinary);
+        private static int log2(int number)  {
+                return (int) (Math.log(number)/Math.log(2));
         }
         
-        private static int getDecimal(int[] binary)  {
-                int result=0;
-                for (int i=0; i<binary.length; i++)  {
-                    result+=Math.pow(2, i);
+        private static String constructString(int[] numbers)  {
+                StringBuilder sb=new StringBuilder();
+                for (int i=numbers.length-1; i>=0; i--)  {
+                        sb.append(numbers[i]);
                 }
-                return result;
+                return sb.toString();
         }
 }
