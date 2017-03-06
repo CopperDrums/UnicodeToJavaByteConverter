@@ -25,9 +25,9 @@ byte javaByte2 = getByteDecimal(159);  //gives -97
 
 gettting javaByte using Unicode's code points.
 ```java
-String encoding="UTF-8";
-
 String codePoint="U+041F";
+
+String encoding="UTF-8";
 
 byte javaByte=makeByte(codePoint, encoding);
 
